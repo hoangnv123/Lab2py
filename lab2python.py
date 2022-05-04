@@ -13,21 +13,7 @@ args = parser.parse_args()
 class Training_Data:
 
     def check_telephone(self: str) -> bool:
-        """
-        Выполняет проверку корректности номера телефона.
-
-        Если формат телефонного номера отличается от "+7-(111)-222-33-44", то будет возвращено False
-
-        Parameters
-        ----------
-        self : str
-            Строка с проверяемым формата телефонного номера
-
-        Returns
-        -------
-         bool:
-            Булевый результат проверки на корректность
-        """
+       
         pattern = r"\+7-\(\d{3}\)-\d{3}-\d{2}-\d{2}"
         if re.match(pattern, self):
             return True
